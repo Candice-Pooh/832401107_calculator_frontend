@@ -30,6 +30,8 @@ calculator_frontend/
 ├── index.html
 ├── style.css
 ├── script.js
+├── extras.css
+├── extras.js
 ├── codestyle.md
 └── README.md
 ```
@@ -51,6 +53,53 @@ The frontend provides:
 - Error messages
 - Responsive layout
 - Keyboard input support
+
+
+### Extended Features
+
+In addition to the required calculator functions, the
+frontend provides several optional features to improve
+usability and user experience.
+
+#### 1. Theme Switching
+
+Users can switch between light and dark themes by clicking
+the theme toggle button in the application header.
+
+The selected theme is stored in browser localStorage,
+allowing the preference to persist after refreshing
+or reopening the website.
+
+The theme switching feature is implemented using
+JavaScript and CSS.
+
+#### 2. Calculation History Search
+
+Users can search calculation history records by entering
+a mathematical expression or calculation result.
+
+The search dynamically filters the displayed records
+without modifying or deleting data from the backend database.
+
+The search results are automatically updated when
+calculation history changes.
+
+The implementation uses JavaScript DOM manipulation
+and MutationObserver to detect history list updates.
+
+#### 3. Keyboard Shortcuts
+
+The calculator supports the following keyboard shortcuts:
+
+- Enter: Submit the current mathematical expression.
+- Escape: Clear the calculator input when it is focused.
+
+Users can also enter mathematical expressions directly
+using their keyboards.
+
+These shortcuts provide a more convenient way to
+interact with the calculator.
+
 
 ## 5. Frontend Architecture
 
@@ -78,6 +127,22 @@ evaluate mathematical expressions.
 
 Instead, it sends expressions to Flask
 and displays the returned results.
+
+### extras.css
+
+Provides the visual styles for optional features,
+including the theme toggle button, history search input,
+and dark mode interface.
+
+### extras.js
+
+Implements optional frontend features, including
+light/dark theme switching, theme preference persistence,
+and calculation history search.
+
+The module uses localStorage for theme preferences
+and MutationObserver to update search results when
+the calculation history changes.
 
 ## 6. Running Locally
 
