@@ -103,7 +103,7 @@ interact with the calculator.
 
 ## 5. Frontend Architecture
 
-The frontend contains three main files.
+The frontend consists of three core files and two additional files for extended features.
 
 ### index.html
 
