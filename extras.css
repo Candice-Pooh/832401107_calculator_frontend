@@ -1,0 +1,372 @@
+/* ==================================
+   Extended Features
+================================== */
+
+
+/* ==================================
+   Theme Toggle Button
+================================== */
+
+.theme-toggle {
+    margin-left: auto;
+
+    padding: 11px 18px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+
+    background: white;
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.theme-toggle:hover {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+
+/* ==================================
+   History Search
+================================== */
+
+.history-search {
+    margin-bottom: 20px;
+}
+
+.history-search label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #475569;
+}
+
+.history-search input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #1e293b;
+
+    font-size: 14px;
+
+    transition: border-color 0.2s;
+}
+
+.history-search input:focus {
+    outline: 2px solid #a5b4fc;
+    border-color: #6366f1;
+}
+
+.history-search-status {
+    min-height: 17px;
+
+    margin: 8px 0 0;
+
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+/* Hide filtered history records */
+
+.history-item[hidden] {
+    display: none !important;
+}
+
+
+/* ==================================
+   Dark Theme - Global
+================================== */
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    background: #0b1220;
+    color: #e2e8f0;
+}
+
+html[data-theme="dark"] body {
+    background:
+        radial-gradient(
+            circle at top left,
+            #1e2a52 0%,
+            transparent 42%
+        ),
+        #0b1220;
+
+    color: #e2e8f0;
+}
+
+
+/* ==================================
+   Dark Theme - Header
+================================== */
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2 {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .subtitle,
+html[data-theme="dark"] .history-subtitle {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .eyebrow {
+    color: #a5b4fc;
+}
+
+html[data-theme="dark"] .connection-status {
+    background: #1e293b;
+
+    color: #e2e8f0;
+
+    box-shadow: none;
+}
+
+html[data-theme="dark"] .theme-toggle {
+    background: #1e293b;
+
+    border-color: #334155;
+
+    color: #e2e8f0;
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+    background: #334155;
+}
+
+
+/* ==================================
+   Dark Theme - Cards
+================================== */
+
+html[data-theme="dark"] .calculator-card,
+html[data-theme="dark"] .history-card {
+    background: #172033;
+
+    border-color: #334155;
+
+    box-shadow:
+        0 12px 35px rgb(0 0 0 / 15%);
+}
+
+html[data-theme="dark"] .badge {
+    background: #312e81;
+
+    color: #c7d2fe;
+}
+
+
+/* ==================================
+   Dark Theme - Calculator
+================================== */
+
+html[data-theme="dark"] .input-label {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .expression-input {
+    background: #0f172a;
+
+    border-color: #475569;
+
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .expression-input::placeholder {
+    color: #64748b;
+}
+
+html[data-theme="dark"] .input-hint,
+html[data-theme="dark"] .keyboard-hint {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .result-container {
+    background: #090f1e;
+
+    border: 1px solid #334155;
+}
+
+html[data-theme="dark"] .result-value {
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .key {
+    background: #29364c;
+
+    color: #f1f5f9;
+}
+
+html[data-theme="dark"] .key:hover:not(:disabled) {
+    background: #3b4a64;
+}
+
+html[data-theme="dark"] .key.function {
+    background: #373075;
+
+    color: #ddd6fe;
+}
+
+html[data-theme="dark"] .key.function:hover:not(:disabled) {
+    background: #494090;
+}
+
+html[data-theme="dark"] .key.operator {
+    background: #193b65;
+
+    color: #bfdbfe;
+}
+
+html[data-theme="dark"] .key.operator:hover:not(:disabled) {
+    background: #27507d;
+}
+
+html[data-theme="dark"] .key.equals {
+    background: #6366f1;
+
+    color: white;
+}
+
+html[data-theme="dark"] .key.equals:hover:not(:disabled) {
+    background: #4f46e5;
+}
+
+
+/* ==================================
+   Dark Theme - History
+================================== */
+
+html[data-theme="dark"] .history-toolbar {
+    border-color: #334155;
+
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .history-item {
+    border-color: #334155;
+}
+
+html[data-theme="dark"] .history-expression {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .history-result {
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .history-time {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .empty-state {
+    color: #94a3b8;
+}
+
+html[data-theme="dark"] .refresh-button {
+    background: #1e293b;
+
+    border-color: #475569;
+
+    color: #e2e8f0;
+}
+
+html[data-theme="dark"] .refresh-button:hover {
+    background: #334155;
+}
+
+html[data-theme="dark"] .delete-button {
+    background: #451a25;
+
+    border-color: #7f1d1d;
+
+    color: #fca5a5;
+}
+
+html[data-theme="dark"] .delete-button:hover {
+    background: #602330;
+}
+
+
+/* ==================================
+   Dark Theme - Search
+================================== */
+
+html[data-theme="dark"] .history-search label {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .history-search input {
+    background: #0f172a;
+
+    border-color: #475569;
+
+    color: #f8fafc;
+}
+
+html[data-theme="dark"] .history-search input::placeholder {
+    color: #64748b;
+}
+
+html[data-theme="dark"] .history-search-status {
+    color: #94a3b8;
+}
+
+
+/* ==================================
+   Dark Theme - Messages
+================================== */
+
+html[data-theme="dark"] .message {
+    color: #cbd5e1;
+}
+
+html[data-theme="dark"] .message.error {
+    color: #fca5a5;
+}
+
+html[data-theme="dark"] .message.success {
+    color: #86efac;
+}
+
+html[data-theme="dark"] .app-footer {
+    color: #94a3b8;
+}
+
+
+/* ==================================
+   Responsive Adjustments
+================================== */
+
+@media (max-width: 480px) {
+
+    .theme-toggle {
+        margin-left: 0;
+    }
+
+    .history-search input {
+        font-size: 16px;
+    }
+
+}
