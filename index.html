@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A full-stack calculator with persistent calculation history."
+    >
+
+    <title>Calculator System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">FULL-STACK APPLICATION</p>
+                <h1>Calculator System</h1>
+
+                <p class="subtitle">
+                    A front-end and back-end separated calculator
+                </p>
+            </div>
+
+            <div class="connection-status" id="connection-status">
+                <span class="status-dot"></span>
+                <span id="connection-text">Connecting...</span>
+            </div>
+        </header>
+
+        <main class="main-layout">
+
+            <!-- Calculator Section -->
+
+            <section class="calculator-card" aria-label="Calculator">
+
+                <div class="section-heading">
+                    <h2>Calculator</h2>
+                    <span class="badge">Standard</span>
+                </div>
+
+                <form id="calculator-form">
+
+                    <label for="expression" class="input-label">
+                        Mathematical Expression
+                    </label>
+
+                    <input
+                        id="expression"
+                        class="expression-input"
+                        type="text"
+                        maxlength="200"
+                        placeholder="e.g. (1+2)×3"
+                        autocomplete="off"
+                        spellcheck="false"
+                        aria-describedby="input-hint"
+                    >
+
+                    <p class="input-hint" id="input-hint">
+                        Supports +, −, ×, ÷, decimals and parentheses
+                    </p>
+
+                    <div class="result-container">
+                        <span class="result-label">RESULT</span>
+
+                        <output
+                            id="result"
+                            class="result-value"
+                            aria-live="polite"
+                        >0</output>
+                    </div>
+
+                    <p
+                        id="message"
+                        class="message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                    <div class="keypad" id="keypad">
+
+                        <button type="button" class="key function"
+                            data-action="clear">AC</button>
+
+                        <button type="button" class="key function"
+                            data-action="backspace">DEL</button>
+
+                        <button type="button" class="key function"
+                            data-value="(">(</button>
+
+                        <button type="button" class="key function"
+                            data-value=")">)</button>
+
+                        <button type="button" class="key"
+                            data-value="7">7</button>
+
+                        <button type="button" class="key"
+                            data-value="8">8</button>
+
+                        <button type="button" class="key"
+                            data-value="9">9</button>
+
+                        <button type="button" class="key operator"
+                            data-value="÷">÷</button>
+
+                        <button type="button" class="key"
+                            data-value="4">4</button>
+
+                        <button type="button" class="key"
+                            data-value="5">5</button>
+
+                        <button type="button" class="key"
+                            data-value="6">6</button>
+
+                        <button type="button" class="key operator"
+                            data-value="×">×</button>
+
+                        <button type="button" class="key"
+                            data-value="1">1</button>
+
+                        <button type="button" class="key"
+                            data-value="2">2</button>
+
+                        <button type="button" class="key"
+                            data-value="3">3</button>
+
+                        <button type="button" class="key operator"
+                            data-value="-">−</button>
+
+                        <button type="button" class="key function"
+                            data-action="negate">±</button>
+
+                        <button type="button" class="key"
+                            data-value="0">0</button>
+
+                        <button type="button" class="key"
+                            data-value=".">.</button>
+
+                        <button type="button" class="key operator"
+                            data-value="+">+</button>
+
+                        <button
+                            type="submit"
+                            class="key equals"
+                            id="calculate-button"
+                        >
+                            = Calculate
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <p class="keyboard-hint">
+                    Press Enter to calculate · Esc to clear
+                </p>
+
+            </section>
+
+            <!-- History Section -->
+
+            <section class="history-card" aria-label="Calculation history">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Calculation History</h2>
+                        <p class="history-subtitle">
+                            Saved securely in the backend database
+                        </p>
+                    </div>
+
+                    <button
+                        id="refresh-history"
+                        class="refresh-button"
+                        type="button"
+                    >
+                        ↻ Refresh
+                    </button>
+
+                </div>
+
+                <div class="history-toolbar">
+                    <span id="history-count">0 records</span>
+                    <span>Newest first</span>
+                </div>
+
+                <ul id="history-list" class="history-list">
+                    <li class="empty-state">
+                        Loading calculation history...
+                    </li>
+                </ul>
+
+            </section>
+
+        </main>
+
+        <footer class="app-footer">
+            <span>Calculator System</span>
+            <span>Frontend · Flask API · SQLite</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
